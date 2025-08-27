@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "Archangelsk";
+    src: url("../fonts/ofont.ru_Archangelsk.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* root */
+
+:root {
+    --font-archangelsk: "Archangelsk", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+}
+
+/* header */
+
+.header {
+    height: 100vh;
+    background: center/cover url(../img/background-1.jpg) no-repeat;
+    display: grid;
+    grid-template-rows: max-content auto;
+    align-self: center;
+}
+
+.header__top, .header__content {
+    width: 100%;
+    padding: 0 320px;
+    margin: 0 auto;
+}
+
+.header__top {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__link {
+    display: flex;
+    align-items: center;
+}
+
+.header__top-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    & svg {
+        cursor: pointer;
+    }
+}
+
+.header__content {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.header__content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 70px;
+    background-color: #F8F200;
+    max-width: 624px;
+    background: center/contain url(../img/bg-yellow.png) no-repeat;
+}
+
+.header__title {
+    font: 400 62px/1 var(--font-archangelsk);
+}
+
+.header__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19px 50px;
+    background-color: #000;
+    color: #F8F200;
+    width: max-content;
+    font: 700 24px/40px var(--font-roboto);
+}
+
+.review {
+    padding: 70px 320px;
+}
+.review__title {
+    font: 400 62px/1 var(--font-archangelsk);
+}
+
+.review__text {
+    padding-top: 25px;
+    font: 400 18px/34px var(--font-roboto);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.review__link {
+    font: 700 18px/34px var(--font-roboto);
+    color: #81d8d0;
+}
+
+.review__images {
+    padding-top: 70px;
+    gap: 32px;
+    display: grid;
+    grid-template-areas:
+    "review-item-1 review-item-3"
+    "review-item-2 review-item-3";
+}
+
+.review__images-item-1 {
+    grid-area: review-item-1;
+    background: center/cover url(../img/review-img-1.png) no-repeat;
+    width: 100%;
+    height: 196px;
+}
+
+.review__images-item-2 {
+    grid-area: review-item-2;
+    background: center/cover url(../img/review-img-2.png) no-repeat;
+    width: 100%;
+    height: 196px;
+}
+
+.review__images-item-3 {
+    grid-area: review-item-3;
+    background: center/cover url(../img/review-img-3.png) no-repeat;
+    width: 100%;
+    height: 424px;
+}
+
+.joint {
+    display: block;
+    max-height: 70px;
+    width: 100%;
+}
+
+/* Media */
+
+@media (max-width: 1440px) {
+
+    .header__top,
+    .header__content {
+        width: 100%;
+        padding: 0 200px;
+        margin: 0 auto;
+    }
+
+    .header__top {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+
+    .header__top, .header__content {
+        width: 100%;
+        padding: 0 100px;
+        margin: 0 auto;
+    }
+
+    .header__top {
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+    .header__top, .header__content {
+        width: 100%;
+        padding: 0 35px;
+        margin: 0 auto;
+    }
+
+    .header__top {
+        padding-top: 20px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .header__top, .header__content {
+        width: 100%;
+        padding: 0 35px;
+        margin: 0 auto;
+    }
+
+    .header__top {
+        padding-top: 20px;
+    }
+}
